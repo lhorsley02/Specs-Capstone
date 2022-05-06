@@ -1,0 +1,12 @@
+MVP
+	Its The Vibe
+        Pitch/Idea
+            A web app that allows users to select a photo(the vibe) and then are given a list of songs based on that photo.
+        MVP/Main Features
+            Users can login/create an account
+            Users can choose a light or dark mode for the web app
+            Users can click each of the category buttons and be taken to a page that displays relevant songs
+            User can view individual songs using a music api
+        Future Features
+            Add lists in each category of movies/shows and books that also match the corresponding “vibe”
+            Users can have favorited “vibe” categories
