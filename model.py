@@ -1,19 +1,27 @@
 
+from datetime import datetime, date
 import email
+from unicodedata import name
 from click import password_option
-from flask_sqlalchemy import SQLAlchemy
 from os import environ
+from flask_sqlalchemy import SQLAlchemy
+from wtforms import StringField, SubmitField, PasswordField, BooleanField, ValidationError
+from wtforms.validators import DataRequired, EqualTo, Length
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_wtf import FlaskForm
+from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 
 db = SQLAlchemy()
 
 
-class User(db.Model):
+class Users(db.Model, UserMixin):
 
     __tablename__ = "users"
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    email = db.Column(db.String(64), nullable=True)
-    password = db.Column(db.String(64), nullable=True)
+    email = db.Column(db.String(128), nullable=False)
+    password_hash = db.Column(db.String(128), nullable=False)
+
 
 
 def create_dummy_data():
@@ -26,8 +34,7 @@ def create_dummy_data():
     db.session.add(dummy3)
     db.session.commit()
 
-    
-    
+
 
 
 def connect_to_db(app):
