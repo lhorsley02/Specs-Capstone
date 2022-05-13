@@ -32,6 +32,10 @@ def show_signup():
 def run_signup():
    return render_template("home.html")
 
+@app.route("/account", methods=["GET"])
+def show_account():
+    return render_template("account.html")
+
 @app.route("/academia", methods=["GET"])
 def show_academia():
     return render_template("academia.html")

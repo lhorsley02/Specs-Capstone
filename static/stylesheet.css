@@ -76,6 +76,36 @@ header {
     
 }
 
+.account-btn {
+    position: absolute;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    top: 37px;
+}
+
+.login-btn {
+    position: absolute;
+    color: white;
+    background: none;
+    border: none;
+    right: 115px;
+    top: 26px;
+    font-size: 10px;
+}
+
+.signup-btn {
+    position: absolute;
+    color: white;
+    background: none;
+    border: none;
+    right: 115px;
+    top: 55px;
+    font-size: 10px;
+}
+
 .info-main {
     display: flex;
     position: absolute;
@@ -239,3 +269,122 @@ header {
         transition: transform .7s;
         opacity: 80%;
     }
+
+    
+.main-txt {
+    color: white;
+    position: absolute;
+    top: -90px;
+    /* left: 50%; */
+    align-self: center;
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    width: 65%;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Garamond';
+}
+
+.aca-img {
+    display: flex;
+    position: relative;
+    color: white;
+    border: none;
+    display: flex;
+    background-image: url("/static/images/academia.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 200px;
+    top: -50px;
+}
+  
+.cott-img {
+    display: flex;
+    position: relative;
+    color: white;
+    border: none;
+    display: flex;
+    background-image: url("/static/images/cottagecore.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 200px;
+    top: -50px;
+}
+  
+.cyber-img {
+    display: flex;
+    position: relative;
+    color: white;
+    border: none;
+    display: flex;
+    background-image: url("/static/images/cyber.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 200px;
+    top: -50px;
+}
+  
+.forest-img {
+    display: flex;
+    position: relative;
+    color: white;
+    border: none;
+    display: flex;
+    background-image: url("/static/images/forest.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 200px;
+    top: -50px;
+}
+  
+.rainy-img {
+    display: flex;
+    position: relative;
+    color: white;
+    border: none;
+    display: flex;
+    background-image: url("/static/images/rain.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 200px;
+    top: -50px;
+}
+.summer-img {
+    display: flex;
+    position: relative;
+    color: white;
+    border: none;
+    display: flex;
+    background-image: url("/static/images/summer.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 200px;
+    top: -50px;
+}
+  
