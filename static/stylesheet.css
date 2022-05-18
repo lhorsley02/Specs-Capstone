@@ -43,6 +43,9 @@ header {
     position: relative;
 }
 
+.box {
+    color: white;
+}
 
 .form-signin {
     align-items: center;

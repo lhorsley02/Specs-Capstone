@@ -7,27 +7,29 @@ from os import environ
 from flask_sqlalchemy import SQLAlchemy
 from wtforms import StringField, SubmitField, PasswordField, BooleanField, ValidationError
 from wtforms.validators import DataRequired, EqualTo, Length
-from werkzeug.security import generate_password_hash, check_password_hash
 from flask_wtf import FlaskForm
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 
 db = SQLAlchemy()
 
 
-class Users(db.Model, UserMixin):
+class User(db.Model, UserMixin):
 
     __tablename__ = "users"
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    email = db.Column(db.String(128), nullable=False)
-    password_hash = db.Column(db.String(128), nullable=False)
+    fname = db.Column(db.String(128), nullable=False)
+    lname = db.Column(db.String(128), nullable=False)
+    email = db.Column(db.String(128), unique=True, nullable=False)
+    username = db.Column(db.String(300), unique=True, nullable=False)
+    password_hash = db.Column(db.String(300), nullable=False)
 
 
 
 def create_dummy_data():
-    dummy1 = User(email="dummy1@gmail.com", password="pass123")
-    dummy2 = User(email="dummy2@gmail.com", password="pass456")
-    dummy3 = User(email="dummy3@gmail.com", password="pass789")
+    dummy1 = User(username="Dummy1", email="dummy1@gmail.com", password="pass123")
+    dummy2 = User(username="Dummy2", email="dummy2@gmail.com", password="pass456")
+    dummy3 = User(username="Dummy3", email="dummy3@gmail.com", password="pass789")
 
     db.session.add(dummy1)
     db.session.add(dummy2)

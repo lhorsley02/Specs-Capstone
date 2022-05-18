@@ -10,14 +10,10 @@ class LoginForm(FlaskForm):
 
 
 
-class UserForm(FlaskForm):
+class SignupForm(FlaskForm):
+	fname = StringField("First Name", validators=[DataRequired()])
+	lname = StringField("Last Name", validators=[DataRequired()])
 	email = StringField("Email", validators=[DataRequired()])
-	password_hash = PasswordField('Password', validators=[DataRequired(), EqualTo('password_hash2', message='Passwords Must Match!')])
-	password_hash2 = PasswordField('Confirm Password', validators=[DataRequired()])
-	submit = SubmitField("Submit")
-
-
-class PasswordForm(FlaskForm):
-	email = StringField("What's Your Email", validators=[DataRequired()])
-	password_hash = PasswordField("What's Your Password", validators=[DataRequired()])
+	username = StringField("Username", validators=[DataRequired()])
+	password = PasswordField('Password', validators=[DataRequired()])
 	submit = SubmitField("Submit")

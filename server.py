@@ -1,7 +1,10 @@
 
-from flask import Flask, render_template, flash, session
+from flask import Flask, redirect, render_template, flash, request, session, url_for
+from flask_login import login_user
 from jinja2 import StrictUndefined
-from model import connect_to_db, db
+from model import connect_to_db, db, User
+from werkzeug.security import generate_password_hash, check_password_hash
+from webforms import LoginForm, SignupForm
 
 app = Flask(__name__)
 
@@ -11,26 +14,52 @@ app.jinja_env.undefined = StrictUndefined
 
 
 @app.route("/", methods=["GET"])
-def show_home():
+def home():
     return render_template("home.html")
 
-@app.route("/login", methods=["GET"])
-def show_login():
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        user = User.query.filter_by(email=email).first()
+        if user:
+            if check_password_hash(user.password, password):
+                login_user(user)
+                return redirect(url_for("home"))
+            else:
+                flash("Password Incorrect")
+                return redirect(url_for("login"))
+        else:
+            flash("Email Not Found")
+            return redirect(url_for("login"))
+
     return render_template("login.html")
 
 
-@app.route("/login", methods=["POST"])
-def run_login():
-   return render_template("home.html")
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    form = SignupForm()
+    form.validate()
+    if form.validate_on_submit():
+        fname = form.fname.data
+        lname = form.lname.data
+        email = form.email.data
+        username = form.username.data
+        password_hash = generate_password_hash(form.password.data, method="pbkdf2:sha256", salt_length=8)
+        if User.query.filter_by(username=username).first():
+            flash("This username is taken")
+            return redirect(url_for("signup"))
+        new_user = User(fname=fname, 
+                        lname=lname,
+                        email=email,
+                        username=username,
+                        password_hash=password_hash)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for("login"))
+    return render_template("signup.html", form = form)
 
-
-@app.route("/signup", methods=["GET"])
-def show_signup():
-    return render_template("signup.html")
-
-@app.route("/signup", methods=["POST"])
-def run_signup():
-   return render_template("home.html")
 
 @app.route("/account", methods=["GET"])
 def show_account():
