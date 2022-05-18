@@ -1,8 +1,8 @@
 
 from flask import Flask, redirect, render_template, flash, request, session, url_for
-from flask_login import login_user
+from flask_login import login_user, LoginManager
 from jinja2 import StrictUndefined
-from model import connect_to_db, db, User
+from models import connect_to_db, db, User
 from werkzeug.security import generate_password_hash, check_password_hash
 from webforms import LoginForm, SignupForm
 
@@ -11,6 +11,15 @@ app = Flask(__name__)
 app.secret_key="ASDF"
 
 app.jinja_env.undefined = StrictUndefined
+login_manager = LoginManager()
+login_manager.login_view = 'auth.login'
+login_manager.init_app(app)
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
 
 
 @app.route("/", methods=["GET"])
@@ -54,7 +63,7 @@ def signup():
                         lname=lname,
                         email=email,
                         username=username,
-                        password_hash=password_hash)
+                        password=password_hash)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for("login"))
