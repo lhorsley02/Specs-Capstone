@@ -43,6 +43,17 @@ header {
     position: relative;
 }
 
+.links {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    position: relative;
+    top: 100px;
+}
+
 .box {
     color: white;
 }
@@ -89,6 +100,7 @@ header {
 
 .account-btn {
     position: absolute;
+    background-image: url(/static/images/pfp.png);
     background-position-y: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -401,4 +413,47 @@ header {
     height: 200px;
     top: -50px;
 }
-  
+
+
+.song-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+    align-self: center;
+    color: white;
+    border: none;
+    width: 65%;
+    height: 100%;
+    top: 75px;
+    margin-top: 125px;
+    margin-bottom: 50px;
+}
+
+.songs {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+    height: 45px;
+    width: 100%;
+    background-color: #333333;
+    opacity: 25%;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h3 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+    opacity: 100%;
+}
