@@ -42,22 +42,19 @@ Whatever the occasion, mood, or "vibe", you can find a playlist created specific
 
 
 ## Photos
-![Screenshot 2022-03-30 075920](https://user-images.githubusercontent.com/99216496/160866643-b986c92e-e362-456e-a882-4daa460ca3ef.png)
+
+!![itvhome](https://user-images.githubusercontent.com/99216496/170347090-59db8216-24bb-4c36-843a-b7326f4918d8.png)
 
 
-![Screenshot 2022-03-30 080003](https://user-images.githubusercontent.com/99216496/160866698-14c6e7d2-49d1-4d46-a531-0905dcb4bab8.png)
+!![itvsignup](https://user-images.githubusercontent.com/99216496/170347139-4bdb9df8-0773-4256-b050-b18c79d36c45.png)
 
 
-![Screenshot 2022-03-30 080043](https://user-images.githubusercontent.com/99216496/160866728-c382be5c-10dc-4fb1-8249-e8168303038c.png)
+!![itvlogin](https://user-images.githubusercontent.com/99216496/170347154-9ab7544d-95ab-4e52-99a2-3d4defe6e4b1.png)
 
 
-![Screenshot 2022-03-30 080122](https://user-images.githubusercontent.com/99216496/160866757-8ebbf7b6-95d1-461d-9355-f82a32fda613.png)
+!![itvsongpage](https://user-images.githubusercontent.com/99216496/170347174-d095654c-fb9e-4763-b483-5832740ed029.png)
 
 
-![Screenshot 2022-03-30 080135](https://user-images.githubusercontent.com/99216496/160866788-890d1904-d260-4124-ad1f-97d9b3ed652f.png)
-
-
-![Screenshot 2022-03-30 080148](https://user-images.githubusercontent.com/99216496/160866809-dff8e9e1-d022-4e9c-a90e-01523f550c7c.png)
 
 
 
