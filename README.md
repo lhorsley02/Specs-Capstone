@@ -43,16 +43,16 @@ Whatever the occasion, mood, or "vibe", you can find a playlist created specific
 
 ## Photos
 
-!![itvhome](https://user-images.githubusercontent.com/99216496/170347090-59db8216-24bb-4c36-843a-b7326f4918d8.png)
+![itvhome](https://user-images.githubusercontent.com/99216496/170347090-59db8216-24bb-4c36-843a-b7326f4918d8.png)
 
 
-!![itvsignup](https://user-images.githubusercontent.com/99216496/170347139-4bdb9df8-0773-4256-b050-b18c79d36c45.png)
+![itvsignup](https://user-images.githubusercontent.com/99216496/170347139-4bdb9df8-0773-4256-b050-b18c79d36c45.png)
 
 
-!![itvlogin](https://user-images.githubusercontent.com/99216496/170347154-9ab7544d-95ab-4e52-99a2-3d4defe6e4b1.png)
+![itvlogin](https://user-images.githubusercontent.com/99216496/170347154-9ab7544d-95ab-4e52-99a2-3d4defe6e4b1.png)
 
 
-!![itvsongpage](https://user-images.githubusercontent.com/99216496/170347174-d095654c-fb9e-4763-b483-5832740ed029.png)
+![itvsongpage](https://user-images.githubusercontent.com/99216496/170347174-d095654c-fb9e-4763-b483-5832740ed029.png)
 
 
 
