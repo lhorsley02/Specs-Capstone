@@ -8,7 +8,7 @@ It's The Vibe is a website created for Users to find music playlists based on th
 Whatever the occasion, mood, or "vibe", you can find a playlist created specifically for that!
 
 ## Tech Used
-• HTML
+•HTML
 
 •CSS
 
@@ -17,6 +17,8 @@ Whatever the occasion, mood, or "vibe", you can find a playlist created specific
 •Flask
 
 •Jinja
+
+•PostGreSQL 
 
 
 ## How to Use
