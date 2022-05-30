@@ -36,8 +36,6 @@ Whatever the occasion, mood, or "vibe", you can find a playlist created specific
 
 • Users can click each of the category buttons and be taken to a page that displays relevant songs
 
-• Users can click each of the category buttons and be taken to a page that displays relevant songs
-
 • User can click on the logo in the top left to take them back to the home page
 
 
